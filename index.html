@@ -3,53 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Egy szuper oldal</title>
+    <link rel="stylesheet" href="lib\bootstrap-4.5.0-dist\css\bootstrap.min.css">
+    <title>Fantastic Pizza</title>
 </head>
+
 <body>
-    <ul>
-        <li>
-            <a href="/">Home</a>
-        </li>
-        <li>
-            <a href="/pages/products.html">Products</a>
-        </li>
-        <li>
-            <a href="/pages/orders.html">Orders</a>
-        </li>
-        <li>
-            <a href="/about.html">About</a>
-        </li>
-    </ul>
-    <h1>Fantastic Burger</h1>
-    <ul>
-        <li>Meat lover
-        <ul>
-            <li>Beef</li>
-            <li>Pork</li>
-            <li>Turkey</li>
-        </ul>
-            
-        </li>
-        <li>Vegetarian</li>
-        <li>Piedone</li>
-    </ul>
-    <h2>Step of order</h2>
-    <ol>
-        <li>Choose a burger</li>
-        <li>Buy it</li>
-        <li>Give your address</li>
-        <li>Eat it</li>
-    </ol>
-    <a href="https://pixabay.com/hu/">
-        Barbecud burgers
-    </a>
-    <a href="pages/orders.html">
-        Orders
-    </a>
-    <a target="blank" href="https://pixabay.com/hu/">
-        <img width="56" src="img/burger-3962996_1920.jpg"
-         alt="tasty burger">
-    </a>
+  <div class="container">
+    <div class="form">
+      <label for="weatherSelect"><h4>Időjárás</h4></label>
+      <select class="form-control" id="weatherSelect">
+          <option id = "monday" value="1">Hétfő</option>
+          <option id = "tuesday" value="2">Kedd</option>
+          <option id = "wednesday" value="3">Szerda</option>
+          <option id = "thursday" value="4">Csütörtök</option>
+          <option id = "friday" value="5">Péntek</option>
+          <option id = "saturday" value="6">Szombat</option>
+          <option id = "sunday" value="7">Vasárnap</option>
+      </select>
+      <div>
+        <p> Mai hőmérséklet:  <span class="show-weather">0</span> celsius</p>       
+      </div>
+      <div>
+        <p>Ajánlatunk: <span class="show-offer"></span></p>        
+      </div>
+      <div>
+        <p>Heti minimum hőmérséklet: <span class="show-min-temperature"></span> celsius</p>
+        <p>Heti maximum hőmérséklet: <span class="show-max-temperature"></span> celsius</p>
+        <p>Heti átlaghőmérséklet: <span class="show-average-temperature"></span> celsius</p>        
+      </div>
+      <div>
+        <button onclick="readWeatherInput()" type="button" class="btn btn-primary">Mutasd</button>
+      </div>
+      
+  </div>
+  </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/index.html">Fantastic Pizza</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/index.html">Kezdőlap<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/orders.html">Megrendelés</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">Rólunk</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login.html">Belépés</a>           
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/products.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Étlap
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/products.html">Pizzák</a>
+                <a class="dropdown-item" href="#">Hamburgerek</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Desszertek</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    
+
+      
+   <script src="weather.js"></script>
 
 </body>
 </html>
